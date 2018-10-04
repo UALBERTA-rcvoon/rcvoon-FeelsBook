@@ -42,8 +42,7 @@ public class EmotionRecordListController {
         int[] counts = erlc.getEmotionFrequencies(emotion_names);
         String[] emotion_counts = new String[counts.length];
         for (int i = 0; i < counts.length; i++) {
-            emotion_counts[i] = (emotion_names.get(i).format()
-                    + " has been recorded " + counts[i] + " times.");
+            emotion_counts[i] = (Integer.toString(counts[i]));
         }
         return emotion_counts;
     }

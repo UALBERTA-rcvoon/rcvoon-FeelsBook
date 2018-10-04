@@ -45,7 +45,7 @@ public class EmotionRecordList {
     public int countEmotionFrequency(Emotion emotion_to_count) {
         int emotion_counter = 0;
         for (int i = 0; i < this.emotion_record_list.size(); i++) {
-            if (emotion_record_list.get(i).getEmotion().format().equals(emotion_to_count.format())) {
+            if (emotion_record_list.get(i).getEmotion().getEmotionName().equals(emotion_to_count.getEmotionName())) {
                 emotion_counter += 1;
             }
         }

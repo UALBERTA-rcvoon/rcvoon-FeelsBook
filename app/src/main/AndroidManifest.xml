@@ -19,10 +19,14 @@
         <activity
             android:name=".EmotionRecordHistoryActivity"
             android:label="@string/title_activity_emotion_record_history"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EmotionRecordCountActivity"
             android:label="EmotionRecordCount"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditEmotionRecordActivity"
+            android:label="@string/title_activity_edit_emotion_record"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -30,7 +30,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String FILENAME = "timp.sav";
+    private static final String FILENAME = "EmotionRecords.sav";
     EmotionRecordListController erlc;
 
     @Override
@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
                 new_emotion_record = new EmotionRecord(new Fear(), today, text);
             }
             erlc.addEmotionRecord(new_emotion_record);
+            erlc.getEmotionRecordList().sortEmotionRecordsByDate();
             Toast.makeText(MainActivity.this,
                     "Your selected emotion was recorded!", Toast.LENGTH_SHORT).show();
             comment.setText("");

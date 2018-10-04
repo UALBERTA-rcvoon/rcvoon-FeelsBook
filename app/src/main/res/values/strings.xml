@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">rcvoon-FeelsBook</string>
     <string name="title_activity_emotion_record_history">EmotionRecordHistory</string>
+    <string name="title_activity_edit_emotion_record">EditEmotionRecordActivity</string>
 </resources>

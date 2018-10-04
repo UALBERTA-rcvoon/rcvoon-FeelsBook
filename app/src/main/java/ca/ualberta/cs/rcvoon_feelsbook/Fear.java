@@ -4,5 +4,8 @@ public class Fear extends Emotion {
     Fear() {
         super("Fear");
     }
-
+    @Override
+    public String toString() {
+        return "---Fear---";
+    }
 }

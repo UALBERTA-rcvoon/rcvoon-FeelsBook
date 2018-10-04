@@ -7,79 +7,162 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/fearText"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:text="Fear:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sadnessText" />
+
+    <TextView
+        android:id="@+id/sadnessText"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:text="Sadness:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angerText" />
+
+    <TextView
+        android:id="@+id/angerText"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:text="Anger:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surpriseText" />
+
+    <TextView
+        android:id="@+id/surpriseText"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:text="Surprise:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loveText" />
+
+    <TextView
+        android:id="@+id/loveText"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:text="Love:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joyText" />
+
+    <TextView
         android:id="@+id/emotionFrequenciesHeader "
         android:layout_width="332dp"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Emotion Frequencies:"
+        android:text="Emotion Statistics:"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/joyTextCount"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
-        android:text="Joy: "
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="103dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="68dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/joyText"
         app:layout_constraintTop_toBottomOf="@+id/emotionFrequenciesHeader " />
 
     <TextView
         android:id="@+id/loveTextCount"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="103dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Love"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="68dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loveText"
         app:layout_constraintTop_toBottomOf="@+id/joyTextCount" />
 
     <TextView
         android:id="@+id/surpriseTextCount"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="103dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Surprise"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="68dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/surpriseText"
         app:layout_constraintTop_toBottomOf="@+id/loveTextCount" />
 
     <TextView
         android:id="@+id/angerTextCount"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="103dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Anger"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="68dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/angerText"
         app:layout_constraintTop_toBottomOf="@+id/surpriseTextCount" />
 
     <TextView
         android:id="@+id/sadnessTextCount"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="103dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Sadness"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="68dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sadnessText"
         app:layout_constraintTop_toBottomOf="@+id/angerTextCount" />
 
     <TextView
         android:id="@+id/fearTextCount"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="103dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Fear"
+        android:layout_marginEnd="68dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fearText"
+        app:layout_constraintTop_toBottomOf="@+id/sadnessTextCount" />
+
+    <TextView
+        android:id="@+id/joyText"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="48dp"
+        android:text="Joy:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emotionFrequenciesHeader " />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Here are the frequencies of each emotion:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sadnessTextCount" />
+        app:layout_constraintTop_toBottomOf="@+id/emotionFrequenciesHeader " />
 </android.support.constraint.ConstraintLayout>

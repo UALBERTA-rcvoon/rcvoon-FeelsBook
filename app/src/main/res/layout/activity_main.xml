@@ -8,96 +8,91 @@
 
     <TextView
         android:id="@+id/emotionQuery"
-        android:layout_width="350dp"
+        android:layout_width="332dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
-        android:text="What emotion are you feeling right now?"
-        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="5dp"
+        android:text="Record your current emotion!"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintVertical_bias="0.034" />
 
     <Button
         android:id="@+id/joyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="132dp"
+        android:layout_height="72dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
         android:text="Joy"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loveButton"
         app:layout_constraintTop_toBottomOf="@+id/emotionQuery" />
 
     <Button
         android:id="@+id/loveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="132dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
         android:text="Love"
         app:layout_constraintEnd_toStartOf="@+id/joyButton"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emotionQuery" />
 
     <Button
         android:id="@+id/surpriseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="132dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Surprise"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/joyButton"
-        app:layout_constraintTop_toBottomOf="@+id/emotionQuery" />
+        app:layout_constraintEnd_toStartOf="@+id/angerButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loveButton" />
 
     <Button
         android:id="@+id/angerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="113dp"
-        android:text="Anger"
-        app:layout_constraintBottom_toTopOf="@+id/optionalCommentHeader"
-        app:layout_constraintEnd_toStartOf="@+id/sadnessButton"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loveButton"
-        app:layout_constraintVertical_bias="0.111" />
-
-    <Button
-        android:id="@+id/sadnessButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="132dp"
+        android:layout_height="72dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Sadness"
+        android:layout_marginEnd="48dp"
+        android:text="Anger"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/surpriseButton"
         app:layout_constraintTop_toBottomOf="@+id/joyButton" />
 
     <Button
-        android:id="@+id/fearButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/sadnessButton"
+        android:layout_width="132dp"
+        android:layout_height="72dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="Sadness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fearButton"
+        app:layout_constraintTop_toBottomOf="@+id/angerButton" />
+
+    <Button
+        android:id="@+id/fearButton"
+        android:layout_width="132dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Fear"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.035"
-        app:layout_constraintStart_toEndOf="@+id/sadnessButton"
+        app:layout_constraintEnd_toStartOf="@+id/sadnessButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/surpriseButton" />
 
     <EditText
@@ -105,15 +100,15 @@
         android:layout_width="324dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="376dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Must be 100 characters or less"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emotionQuery" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/optionalCommentHeader"

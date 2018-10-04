@@ -6,9 +6,9 @@
     <item
         android:id="@+id/viewEmotionRecordHistory"
         android:onClick="viewHistory"
-        android:title="View emotion history" />
+        android:title="History" />
     <item
         android:id="@+id/viewEmotionRecordCount"
         android:onClick="viewCount"
-        android:title="View emotion frequencies" />
+        android:title="Statistics" />
 </menu>
