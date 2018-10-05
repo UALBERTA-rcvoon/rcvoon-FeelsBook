@@ -6,7 +6,7 @@ public class Joy extends Emotion {
         super("Joy");
     }
     @Override
-    public String toString() {
-        return "---Joy----";
+    public String format() {
+        return "----Joy----";
     }
 }

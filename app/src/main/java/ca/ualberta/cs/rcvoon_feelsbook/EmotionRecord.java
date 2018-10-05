@@ -53,12 +53,12 @@ public class EmotionRecord implements Comparable<EmotionRecord> {
     public String getFormattedDate() {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         String report_date = df.format(this.getDate());
-        return report_date;
+        return "[" + report_date + "] ";
     }
 
     @Override
     public String toString() {
-        return "[" + this.getFormattedDate() + "]     " + this.emotion.getEmotion() + "\n" + this.getOptional_comment();
+        return this.getFormattedDate() + this.getEmotion().getEmotionName() + "\n" + this.getOptional_comment();
     }
     @Override
     public int compareTo(EmotionRecord er) {

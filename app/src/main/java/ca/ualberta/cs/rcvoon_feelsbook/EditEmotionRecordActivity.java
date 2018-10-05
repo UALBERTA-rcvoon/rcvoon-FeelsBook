@@ -58,6 +58,7 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
             new_emotion = temp_er.getEmotion();
             new_date = temp_er.getDate();
             new_comment = temp_er.getOptional_comment();
+            updateTextView();
 
         }
         EmotionRecordListController.getEmotionRecordList().addListener(new Listener() {
@@ -71,8 +72,6 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
 
                 }
         });
-
-        updateTextView();
         final int selectedPosition = position;
         Button edit_emotion_button = (Button) findViewById(R.id.editEmotionButton);
         edit_emotion_button.setOnClickListener(new View.OnClickListener() {
@@ -207,7 +206,7 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
         TextView emotion_text = (TextView) findViewById(R.id.editEmotionTextbox);
         TextView date_text = (TextView) findViewById(R.id.editDateTextbox);
         TextView comment_text = (TextView) findViewById(R.id.editCommentTextbox);
-        emotion_text.setText(new_emotion.getEmotionName());
+        emotion_text.setText(new_emotion.format());
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         String formatted_date = df.format(new_date);
         date_text.setText(formatted_date);

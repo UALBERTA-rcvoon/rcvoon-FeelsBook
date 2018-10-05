@@ -5,7 +5,7 @@ public class Surprise extends Emotion {
         super("Surprise");
     }
     @Override
-    public String getEmotion() {
-        return "-Surprise-";
+    public String format() {
+        return "--Surprise--";
     }
 }

@@ -13,8 +13,6 @@ public class EmotionRecordCountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emotion_record_count);
-        Collection<EmotionRecord> emotion_records = EmotionRecordListController.getEmotionRecordList().getEmotionRecords();
-
         displayEmotionFrequencies();
     }
 

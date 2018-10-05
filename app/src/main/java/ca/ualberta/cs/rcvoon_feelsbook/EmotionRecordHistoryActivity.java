@@ -75,7 +75,7 @@ public class EmotionRecordHistoryActivity extends AppCompatActivity {
         public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
             String[] options = {"Delete", "Edit"};
             AlertDialog.Builder adb = new AlertDialog.Builder(EmotionRecordHistoryActivity.this);
-            adb.setTitle("Edit record?");
+            adb.setTitle("Edit item?");
             adb.setCancelable(true);
             final int finalPosition = position;
             adb.setItems(options, new DialogInterface.OnClickListener() {
@@ -87,9 +87,7 @@ public class EmotionRecordHistoryActivity extends AppCompatActivity {
                         removeEmotionRecord(er);
                     }
                     if (which == 1) {
-                        Intent intent = new Intent(EmotionRecordHistoryActivity.this, EditEmotionRecordActivity.class);
-                        intent.putExtra("position",finalPosition);
-                        startActivity(intent);
+                        editEmotionRecord(finalPosition);
                     }
                 }
             });
@@ -108,6 +106,12 @@ public class EmotionRecordHistoryActivity extends AppCompatActivity {
         super.onResume();
         EmotionRecordListController.getEmotionRecordList().sortEmotionRecordsByDate();
     }
+    public void editEmotionRecord(int position) {
+        Intent intent = new Intent(EmotionRecordHistoryActivity.this, EditEmotionRecordActivity.class);
+        intent.putExtra("position",position);
+        startActivity(intent);
+    }
+
     public void removeEmotionRecord(EmotionRecord er) {
         EmotionRecordListController.getEmotionRecordList().removeEmotionRecord((er));
         Toast.makeText(EmotionRecordHistoryActivity.this,

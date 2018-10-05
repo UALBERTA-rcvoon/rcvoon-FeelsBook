@@ -13,18 +13,8 @@ public class EmotionRecordListController {
         }
         return emotion_record_list;
     }
-
-    static public void setEmotionRecordList(EmotionRecordList new_emotion_record_list) {
-        emotion_record_list = new_emotion_record_list;
-    }
-    public void editEmotionRecord(EmotionRecord emotion_record_to_change, int position) {
-        emotion_record_list.editEmotionRecord( emotion_record_to_change, position);
-    }
     public void addEmotionRecord(EmotionRecord emotion_record_to_add) {
         emotion_record_list.addEmotionRecord(emotion_record_to_add);
-    }
-    public void sortEmotionRecordListByDate(){
-        emotion_record_list.sortEmotionRecordsByDate();
     }
 
     public int[] getEmotionFrequencies(ArrayList<Emotion> emotion_names) {

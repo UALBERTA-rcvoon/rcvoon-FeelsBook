@@ -11,7 +11,7 @@ public class Emotion {
     public String getEmotionName() {
         return this.emotion_name;
     }
-    public String getEmotion() {
+    public String format() {
         return this.emotion_name;
     }
 

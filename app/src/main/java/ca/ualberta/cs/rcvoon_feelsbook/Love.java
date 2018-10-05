@@ -7,7 +7,7 @@ public class Love extends Emotion {
 
     }
     @Override
-    public String toString() {
-        return "---Love---";
+    public String format() {
+        return "----Love----";
     }
 }
