@@ -139,6 +139,7 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
             day = c.get(Calendar.DAY_OF_MONTH);
             hour = c.get(Calendar.HOUR_OF_DAY);
             minute = c.get(Calendar.MINUTE);
+            second = new_date.getSeconds();
             DatePickerDialog datePickerDialog = new DatePickerDialog(EditEmotionRecordActivity.this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int selected_year, int month_of_year, int day_of_month) {
@@ -151,7 +152,6 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
                                               int selected_minute) {
                             hour = hour_of_day;
                             minute = selected_minute;
-                            second = c.get(Calendar.SECOND);
                             GregorianCalendar newGregorianCalendar = new GregorianCalendar(year, month, day, hour, minute, second);
                             new_date = newGregorianCalendar.getTime();
                             updateTextView();
