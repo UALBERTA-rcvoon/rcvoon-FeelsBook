@@ -2,4 +2,34 @@
     <string name="app_name">rcvoon-FeelsBook</string>
     <string name="title_activity_emotion_record_history">EmotionRecordHistory</string>
     <string name="title_activity_edit_emotion_record">EditEmotionRecordActivity</string>
+    <string name="edit_emotion_record_text">Edit Emotion Record</string>
+    <string name="edit_emotion_button_text">Edit Emotion</string>
+    <string name="edit_date_button_text">Edit Date</string>
+    <string name="edit_comment_button_text">Edit Comment</string>
+    <string name="display_emotion_text">Emotion:</string>
+    <string name="display_date_text">Date:</string>
+    <string name="display_comment_text">Comment:</string>
+
+    <string name="display_emotion_statistics">Emotion Statistics:</string>
+    <string name="joy_text">Joy:</string>
+    <string name="love_text">Love:</string>
+    <string name="surprise_text">Surprise:</string>
+    <string name="anger_text">Anger:</string>
+    <string name="sadness_text">Sadness:</string>
+    <string name="fear_text">Fear:</string>
+    <string name="here_frequencies">Here are the frequencies of each emotion:</string>
+
+    <string name="display_emotion_history">Emotion History:</string>
+
+    <string name="emotion_query_text">Record your current emotion!</string>
+    <string name="joy_button_text">Joy</string>
+    <string name="love_button_text">Love</string>
+    <string name="surprise_button_text">Surprise</string>
+    <string name="anger_button_text">Anger</string>
+    <string name="sadness_button_text">Sadness</string>
+    <string name="fear_button_text">Fear</string>
+    <string name="add_comment_text">Add a comment below:</string>
+    <string name="optional_comment_hint">Must be 100 characters or less</string>
+
+
 </resources>

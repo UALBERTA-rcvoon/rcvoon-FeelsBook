@@ -93,7 +93,7 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
 
                 }
         });
-        final int selectedPosition = position;
+        final int selected_position = position;
         // Set up listeners for each of the buttons to perform the appropriate method
         // when each button is pressed.
         Button edit_emotion_button = (Button) findViewById(R.id.editEmotionButton);
@@ -101,7 +101,7 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 setResult(RESULT_OK);
-                editEmotionRecordEmotion(selectedPosition);
+                editEmotionRecordEmotion(selected_position);
             }
         });
         Button edit_date_button = (Button) findViewById(R.id.editDateButton);
@@ -109,7 +109,7 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 setResult(RESULT_OK);
-                editEmotionRecordDate(selectedPosition);
+                editEmotionRecordDate(selected_position);
             }
         });
         Button edit_comment_button = (Button) findViewById(R.id.editCommentButton);
@@ -117,7 +117,7 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 setResult(RESULT_OK);
-                editEmotionRecordComment(selectedPosition);
+                editEmotionRecordComment(selected_position);
             }
         });
     }
@@ -186,8 +186,8 @@ public class EditEmotionRecordActivity extends AppCompatActivity {
                                           int selected_minute) {
                         hour = hour_of_day;
                         minute = selected_minute;
-                        GregorianCalendar newGregorianCalendar = new GregorianCalendar(year, month, day, hour, minute, second);
-                        new_date = newGregorianCalendar.getTime();
+                        GregorianCalendar new_gregorian_calendar = new GregorianCalendar(year, month, day, hour, minute, second);
+                        new_date = new_gregorian_calendar.getTime();
                         // Update the emotion record and change the date shown to the user.
                         updateTextView();
                         updateEmotionRecord();

@@ -1,7 +1,8 @@
 package ca.ualberta.cs.rcvoon_feelsbook;
 /**
- * <h1>EmotionRecordListController</h1>
- * EmotionRecordListController is a
+ * <h1>CommentTooLongException</h1>
+ * CommentTooLongException displays a custom exception message when a comment with greater than
+ * 100 characters is inputted.
  *
  * @author  Riley Voon
  * @version 1.0

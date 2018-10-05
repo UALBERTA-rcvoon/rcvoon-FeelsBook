@@ -11,7 +11,7 @@
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Edit Emotion Record"
+        android:text="@string/edit_emotion_record_text"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="16dp"
-        android:text="Edit Emotion"
+        android:text="@string/edit_emotion_button_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmotionRecordText" />
 
@@ -32,7 +32,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="16dp"
-        android:text="Edit Date"
+        android:text="@string/edit_date_button_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmotionButton" />
 
@@ -42,7 +42,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="16dp"
-        android:text="Edit Comment"
+        android:text="@string/edit_comment_button_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDateButton" />
 
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
-        android:text="Emotion:"
+        android:text="@string/display_emotion_text"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editEmotionTextbox"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Date:"
+        android:text="@string/display_date_text"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmotionTextbox" />
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="42dp"
-        android:text="Comment:"
+        android:text="@string/display_comment_text"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDateTextbox" />

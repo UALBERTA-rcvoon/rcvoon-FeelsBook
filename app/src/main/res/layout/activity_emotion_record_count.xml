@@ -12,7 +12,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="16dp"
-        android:text="Fear:"
+        android:text="@string/fear_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sadnessText" />
@@ -23,7 +23,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="16dp"
-        android:text="Sadness:"
+        android:text="@string/sadness_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/angerText" />
@@ -34,7 +34,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="16dp"
-        android:text="Anger:"
+        android:text="@string/anger_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/surpriseText" />
@@ -45,7 +45,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="16dp"
-        android:text="Surprise:"
+        android:text="@string/surprise_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loveText" />
@@ -56,7 +56,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="16dp"
-        android:text="Love:"
+        android:text="@string/love_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/joyText" />
@@ -67,7 +67,7 @@
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Emotion Statistics:"
+        android:text="@string/display_emotion_statistics"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -150,18 +150,18 @@
         android:layout_height="44dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="48dp"
-        android:text="Joy:"
+        android:text="@string/joy_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emotionFrequenciesHeader " />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/hereAreFrequencies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Here are the frequencies of each emotion:"
+        android:text="@string/here_frequencies"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emotionFrequenciesHeader " />

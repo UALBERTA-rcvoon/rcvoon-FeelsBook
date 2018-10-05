@@ -85,17 +85,17 @@ public class EmotionRecordHistoryActivity extends AppCompatActivity {
             AlertDialog.Builder adb = new AlertDialog.Builder(EmotionRecordHistoryActivity.this);
             adb.setTitle("Edit item?");
             adb.setCancelable(true);
-            final int finalPosition = position;
+            final int final_position = position;
             adb.setItems(options, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     // the user clicked on options[which]
-                    final EmotionRecord er = list.get(finalPosition);
+                    final EmotionRecord er = list.get(final_position);
                     if (which == 0) {
                         removeEmotionRecord(er);
                     }
                     if (which == 1) {
-                        editEmotionRecord(finalPosition);
+                        editEmotionRecord(final_position);
                     }
                 }
             });

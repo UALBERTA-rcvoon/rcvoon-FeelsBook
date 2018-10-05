@@ -26,7 +26,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Emotion History:"
+        android:text="@string/display_emotion_history"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
