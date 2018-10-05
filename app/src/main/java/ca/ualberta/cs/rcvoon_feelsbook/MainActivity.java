@@ -27,12 +27,30 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-
+/**
+ * <h1>MainActivity</h1>
+ * MainActivity shows the first screen of the app. On it, users can record their current emotions
+ * by pressing a button corresponding to their current emotion. They may also record a comment
+ * along with their emotion. Users can view the list of recorded emotions by going to the menu
+ * in the upper-right hand corner of the activity and selecting "History". They may also
+ * see the number of times each emotion has been recorded by selecting "Statistics".
+ *
+ * @author  Riley Voon
+ * @version 1.0
+ * @since   2018-10-05
+ *
+ * © 2018 Riley Voon.  All rights reserved.
+ *
+ */
 public class MainActivity extends AppCompatActivity {
 
-    private static final String FILENAME = "EmotionRecords.sav";
+    private static final String FILENAME = "EmotionRecords.sav";        //the filename to save data to.
     EmotionRecordListController erlc;
 
+    /**
+     * Creates the activity when the program is started and assigns listeners
+     * to each of the 6 emotion buttons.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,27 +106,41 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    /**
+     * Creates the option menu when the activity is made.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
+    /**
+     * Switches to the emotion history activity by pressing the upper menu button.
+     */
     public void viewHistory(MenuItem menu) {
         Intent intent = new Intent(MainActivity.this, EmotionRecordHistoryActivity.class);
         startActivity(intent);
     }
-
+    /**
+     * Switches to the emotion statistics activity by pressing the bottom menu button.
+     */
     public void viewCount(MenuItem menu) {
         Intent intent = new Intent(MainActivity.this, EmotionRecordCountActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * On start, load all of the saved EmotionRecords from a file.
+     */
     @Override
     protected void onStart() {
         super.onStart();
         loadFromFile();
     }
+    /**
+     * Using Gson, retrieve the list of EmotionRecords from a file.
+     */
     private void loadFromFile() {
         try {
             EmotionRecordListController erlc = new EmotionRecordListController();
@@ -127,7 +159,9 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException();
         }
     }
-
+    /**
+     * Save the modified list of EmotionRecords to a file using Gson.
+     */
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME,
@@ -148,12 +182,22 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException();
         }
     }
+    /**
+     * When a button is pressed, add an emotion record to the list. Makes a new EmotionRecord object
+     * using the emotion corresponding to the pressed button, the current date, and the comment the user
+     * may have inputted at the bottom of the screen.
+     */
     public void addRecord(String new_emotion) {
+        // Initialize a new emotion record object and emotion record list controller.
         EmotionRecord new_emotion_record = new EmotionRecord();
-        Date today = Calendar.getInstance().getTime();
         EmotionRecordListController erlc = new EmotionRecordListController();
+        // Get the current date.
+        Date today = Calendar.getInstance().getTime();
+        // Get the comment from the bottom text box and make it a string.
         EditText comment = (EditText) findViewById(R.id.addOptionalComment);
         String text = comment.getText().toString();
+        // Make a new EmotionRecord object and add it to the list. Sort the list
+        // afterwards and save the changes.
         if (text.length() <= EmotionRecord.getMAX_CHARS()) {
             if (new_emotion.equals("Joy")) {
                 new_emotion_record = new EmotionRecord(new Joy(), today, text);
@@ -180,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
             comment.setText("");
             saveInFile();
         }
+        // Remind user that comments can only be less than 100 characters.
         else {
             Toast.makeText(MainActivity.this,
                     "Comments must be less than 100 characters.", Toast.LENGTH_SHORT)
